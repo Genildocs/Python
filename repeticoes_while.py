@@ -46,35 +46,54 @@ import time
 #         x += 1
 #     print(f'Saldo total em {meses} meses: {saldo:.2f}')
 # anos_de_deposito(tempo_deposito)
-print('--'*26)
-#Exercicio de divida
-print('****COBRANÇAS MEIRELIS****')
+# print('--'*26)
+# #Exercicio de divida
+# print('****COBRANÇAS MEIRELIS****')
+#
+# def divida():
+#     divida_inicial = float(input('Digite o valor inicial da divida? R$ '))
+#     return divida_inicial
+# divida = divida()
+# def juros_mensais():
+#     juros = float(input('Digite os juros mensais da dividas? '))
+#     return juros
+# juros = juros_mensais()
+# def pagamento_cliente():
+#     pagamento = float(input("Digite o valor mensal que o cliente deseja pagar? R$ "))
+#     return pagamento
+# def calculo_divida():
+#     saldo_divida = divida
+#     juros_mensal = juros
+#     pagamento_mensal = pagamento_cliente()
+#     meses = 1
+#     tot_juros = 0
+#     tot_pago = pagamento_mensal
+#     while meses <= saldo_divida:
+#         saldo_divida = saldo_divida + (saldo_divida * juros / 100)
+#         saldo_divida -= pagamento_mensal
+#         meses += 1
+#         tot_juros += juros_mensal
+#         tot_pago += pagamento_mensal
+#         tot_divida = divida + (divida * (tot_juros / 100))
+#     return print(f'Divida de R$ {divida} foi paga em {meses} meses com um total de {tot_juros:.2f}% de juros e pagamento total de R${tot_divida:.2f}, pagamento'
+#                  f' realizado pelo cliente {tot_pago}')
+# calculo_divida()
 
-def divida():
-    divida_inicial = float(input('Digite o valor inicial da divida? R$ '))
-    return divida_inicial
-divida = divida()
-def juros_mensais():
-    juros = float(input('Digite os juros mensais da dividas? '))
-    return juros
-juros = juros_mensais()
-def pagamento_cliente():
-    pagamento = float(input("Digite o valor mensal que o cliente deseja pagar? R$ "))
-    return pagamento
-def calculo_divida():
-    saldo_divida = divida
-    juros_mensal = juros
-    pagamento_mensal = pagamento_cliente()
-    meses = 1
-    tot_juros = 0
-    tot_pago = pagamento_mensal
-    while meses <= saldo_divida:
-        saldo_divida = saldo_divida + (saldo_divida * juros / 100)
-        saldo_divida -= pagamento_mensal
-        meses += 1
-        tot_juros += juros_mensal
-        tot_pago += pagamento_mensal
-        tot_divida = divida + (divida * (tot_juros / 100))
-    return print(f'Divida de R$ {divida} foi paga em {meses} meses com um total de {tot_juros:.2f}% de juros e pagamento total de R${tot_divida:.2f}, pagamento'
-                 f' realizado pelo cliente {tot_pago}')
-calculo_divida()
+#interremponde laço while
+
+soma = 0
+count = 0
+valor = 0
+while True:
+    try:
+         valor = int(input("Digite um numero ou 0 para sair: "))
+         if valor == 0:
+            break
+    except ValueError:
+        print('Valor invalido, digite apenas numeros!')
+    soma += valor
+    count += 1
+    media = soma / count
+print(f'A soma de todos os numeros digitados foram {soma}')
+print(f'A quantidade de numeros digitados foram {count}')
+print(f'A media dos numeros foram {media}')
