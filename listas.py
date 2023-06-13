@@ -42,10 +42,51 @@
 # for i in list:
 #     print(i)
 
-list_a = [1,2,3]
-list_b = [4,5,6]
-list_c = []
-list_c.extend(list_a)
-list_c.extend(list_b)
-print(list_c)
+# list_a = [1,2,3]
+# list_b = [4,5,6]
+# list_c = []
+# list_c.extend(list_a)
+# list_c.extend(list_b)
+# print(list_c)
 
+list_1 = []
+list_2 = []
+list_3 = []
+
+a= 1
+while True:
+    n = int(input('Digite um numero para a primeira lista( 0 para sair): '))
+    if n == 0:
+        break
+    list_1.append(n)
+    a += 1
+
+b = 1
+while True:
+    x = int(input('Digite um numero para a segunda lista( 0 para sair): '))
+    if x == 0:
+        break
+    list_2.append(x)
+    b += 1
+
+list_3.extend(list_1)
+list_3.extend(list_2)
+
+x = 0
+while x < len(list_3):
+    # print(f'lista 3 na posição {x}: {list_3[x]}')
+    x += 1
+
+
+
+#Sem elementos repetidos
+c = 0
+while c < len(list_1):
+    elemente = list_1[c]
+    while list_1.count(elemente):
+        list_1.remove(elemente)
+
+
+    c += 1
+
+print(list_1)
