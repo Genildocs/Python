@@ -49,44 +49,68 @@
 # list_c.extend(list_b)
 # print(list_c)
 
-list_1 = []
-list_2 = []
-list_3 = []
+# list_1 = []
+# list_2 = []
+# lista_3 = []
+#
+# a= 1
+# while True:
+#     n = int(input('Digite um numero para a primeira lista( 0 para sair): '))
+#     if n == 0:
+#         break
+#     list_1.append(n)
+#     a += 1
+#
+# b = 1
+# while True:
+#     x = int(input('Digite um numero para a segunda lista( 0 para sair): '))
+#     if x == 0:
+#         break
+#     list_2.append(x)
+#     b += 1
+#
+# lista_3.extend(list_1)
+# lista_3.extend(list_2)
+#
+# x = 0
+# while x < len(lista_3):
+#     # print(f'lista 3 na posição {x}: {list_3[x]}')
+#     x += 1
+#
+#
+# #Sem elementos repetidos
+# lista_3 = list_1[:]
+# a = 0
+# while a < len(list_2):
+#     if list_2[a] not in lista_3:
+#         lista_3.append(list_2[a])
+#
+#     a += 1
+# lista_3 = list(set(lista_3))
+# print(f'Lista sem numeros repetidos {lista_3}')
 
-a= 1
+# lista = list(range(10))
+# print(lista)
+
+#Simulação de uma fila de banco
+ultimo = 10
+fila = list(range(1, ultimo + 1))
 while True:
-    n = int(input('Digite um numero para a primeira lista( 0 para sair): '))
-    if n == 0:
+    print(f'\nExistem {len(fila)} clientes na fila')
+    print(f'Fila atual: {fila}')
+    print('Digite F para adicionar um cliente ao fim da fila.')
+    print('ou A para realizar o atendimento. S para sair.')
+    operacao = input('Operação (F, A ou S) : ')
+    if operacao == 'A':
+        if len(fila) > 0:
+            atendido = fila.pop(0)
+            print(f'Cliente {atendido} atendido')
+        else:
+            print('fila vazia! Ninguem para atender')
+    elif operacao == 'F':
+        ultimo += 1 #incrementa o ticket do novo cliente
+        fila.append(ultimo)
+    elif operacao == 'S':
         break
-    list_1.append(n)
-    a += 1
-
-b = 1
-while True:
-    x = int(input('Digite um numero para a segunda lista( 0 para sair): '))
-    if x == 0:
-        break
-    list_2.append(x)
-    b += 1
-
-list_3.extend(list_1)
-list_3.extend(list_2)
-
-x = 0
-while x < len(list_3):
-    # print(f'lista 3 na posição {x}: {list_3[x]}')
-    x += 1
-
-
-
-#Sem elementos repetidos
-c = 0
-while c < len(list_1):
-    elemente = list_1[c]
-    while list_1.count(elemente):
-        list_1.remove(elemente)
-
-
-    c += 1
-
-print(list_1)
+    else:
+        print('Operação invalida! Digite apenas F, A ou S!')
