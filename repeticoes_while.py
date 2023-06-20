@@ -84,6 +84,7 @@ import time
 soma = 0
 count = 0
 valor = 0
+lista = []
 while True:
     try:
          valor = int(input("Digite um numero ou 0 para sair: "))
@@ -91,9 +92,13 @@ while True:
             break
     except ValueError:
         print('Valor invalido, digite apenas numeros!')
+
+    lista.append(valor)
     soma += valor
     count += 1
     media = soma / count
+print(f'Os numeros digitados foram {lista}')
 print(f'A soma de todos os numeros digitados foram {soma}')
 print(f'A quantidade de numeros digitados foram {count}')
 print(f'A media dos numeros foram {media}')
+print(type(1))

@@ -93,24 +93,47 @@
 # print(lista)
 
 #Simulação de uma fila de banco
-ultimo = 10
-fila = list(range(1, ultimo + 1))
-while True:
-    print(f'\nExistem {len(fila)} clientes na fila')
-    print(f'Fila atual: {fila}')
-    print('Digite F para adicionar um cliente ao fim da fila.')
-    print('ou A para realizar o atendimento. S para sair.')
-    operacao = input('Operação (F, A ou S) : ')
-    if operacao == 'A':
-        if len(fila) > 0:
-            atendido = fila.pop(0)
-            print(f'Cliente {atendido} atendido')
-        else:
-            print('fila vazia! Ninguem para atender')
-    elif operacao == 'F':
-        ultimo += 1 #incrementa o ticket do novo cliente
-        fila.append(ultimo)
-    elif operacao == 'S':
-        break
-    else:
-        print('Operação invalida! Digite apenas F, A ou S!')
+# ultimo = 10
+# fila = list(range(1, ultimo + 1))
+# while True:
+#     print(f'\nExistem {len(fila)} clientes na fila')
+#     print(f'Fila atual: {fila}')
+#     print('Digite F para adicionar um cliente ao fim da fila.')
+#     print('ou A para realizar o atendimento. S para sair.')
+#     operacao = input('Operação (F, A ou S) : ')
+#     if operacao == 'A':
+#         if len(fila) > 0:
+#             atendido = fila.pop(0)
+#             print(f'Cliente {atendido} atendido')
+#         else:
+#             print('fila vazia! Ninguem para atender')
+#     elif operacao == 'F':
+#         ultimo += 1 #incrementa o ticket do novo cliente
+#         fila.append(ultimo)
+#     elif operacao == 'S':
+#         break
+#     else:
+#         print('Operação invalida! Digite apenas F, A ou S!')
+
+#programa 6.8 - pilhas de prato
+# prato = 5
+# pilha = list(range(1, prato + 1))
+# while True:
+#     print(f'\nExistem {len(pilha)} pratos na pilha')
+#     print(f'Pilha atual: {pilha}')
+#     print('Digite E para empilhar um novo prato,')
+#     print('Ou D para desempilhar. S para sair.')
+#     operacao = input('Operação: (E, D ou S) ')
+#     if operacao == 'D':
+#         if len(pilha) > 0:
+#             lavado = pilha.pop(-1)
+#             print(f'Prato {lavado} lavado')
+#         else:
+#             print('Pilha vazia! Nada para lavar.')
+#     elif operacao == 'E':
+#         prato += 1 #novo prato
+#         pilha.append(prato)
+#     elif operacao == 'S':
+#         break
+#     else:
+#         print('\nOperação invalida! Digite apenas E, D ou S!')
