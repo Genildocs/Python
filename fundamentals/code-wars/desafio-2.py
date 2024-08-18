@@ -1,4 +1,3 @@
-import math
 def double_integer(num):
     return num * 2
 

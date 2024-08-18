@@ -1,6 +1,6 @@
 import random
-frutas = ["Banana", "Maça","Laranja","Mamão"]
-print(f'Total de elementos na lista: {len(frutas)}')
+# frutas = ["Banana", "Maça","Laranja","Mamão"]
+# print(f'Total de elementos na lista: {len(frutas)}')
 
 # sorteando alunos
 
@@ -14,3 +14,9 @@ print(f'Total de elementos na lista: {len(frutas)}')
 # print(random.sample(alunos, len(alunos)))
 
 
+lanches = []
+lanches.append("Hamburguer")
+lanches.insert(0, "Suco")
+print(lanches)
+numbers = list(range(1,11))
+print(numbers)
